@@ -19,6 +19,7 @@ namespace VerticalSliceArchitectureWithCQRS.Customers.GetCustomerById
                 return Results.Ok(response);
             })
             .WithName("GetCustomerById")
+            .WithTags("Customers")
             .Produces<GetCustomerByIdResponse>()
             .ProducesProblem(StatusCodes.Status400BadRequest)
             .WithSummary("Get Customer By Id")

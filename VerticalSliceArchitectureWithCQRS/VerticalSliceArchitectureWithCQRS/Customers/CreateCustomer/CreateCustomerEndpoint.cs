@@ -21,6 +21,7 @@ namespace VerticalSliceArchitectureWithCQRS.Customers.CreateCustomer
                         return Results.Created($"/Customers/{result.Id}", result);
                     })
                 .WithName("CreateCustomer")
+                .WithTags("Customers")
                 .Produces<CreateCustomerResponse>(StatusCodes.Status201Created)
                 .ProducesProblem(StatusCodes.Status400BadRequest)
                 .WithSummary("Create Customer")

@@ -4,7 +4,7 @@ using VerticalSliceArchitectureWithCQRS.Share.Exceptions;
 
 namespace VerticalSliceArchitectureWithCQRS.Customers.UpdateCustomer
 {
-    internal class UpdateCustomerCommandHandler(CustomerContext context)
+    internal class UpdateCustomerCommandHandler(AppDbContext context)
         : ICommandHandler<UpdateCustomerCommand, UpdateCustomerResponse>
     {
         public async Task<UpdateCustomerResponse> Handle(UpdateCustomerCommand command, CancellationToken cancellationToken)

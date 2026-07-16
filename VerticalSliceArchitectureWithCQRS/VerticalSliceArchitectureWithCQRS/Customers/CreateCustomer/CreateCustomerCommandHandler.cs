@@ -4,7 +4,7 @@ using VerticalSliceArchitectureWithCQRS.Share.CQRS;
 
 namespace VerticalSliceArchitectureWithCQRS.Customers.CreateCustomer
 {
-    internal class CreateCustomerCommandHandler(CustomerContext context) : ICommandHandler<CreateCustomerCommand, CreateCustomerResponse>
+    internal class CreateCustomerCommandHandler(AppDbContext context) : ICommandHandler<CreateCustomerCommand, CreateCustomerResponse>
     {
         public async Task<CreateCustomerResponse> Handle(CreateCustomerCommand command, CancellationToken cancellationToken)
         {

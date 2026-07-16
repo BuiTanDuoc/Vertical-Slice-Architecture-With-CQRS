@@ -5,7 +5,7 @@ using VerticalSliceArchitectureWithCQRS.Share.Exceptions;
 
 namespace VerticalSliceArchitectureWithCQRS.Customers.DeleteCustomer
 {
-    internal class DeleteCustomerCommandHandler(CustomerContext context)
+    internal class DeleteCustomerCommandHandler(AppDbContext context)
         : ICommandHandler<DeleteCustomerCommand, DeleteCustomerResponse>
     {
         public async Task<DeleteCustomerResponse> Handle(DeleteCustomerCommand command, CancellationToken cancellationToken)

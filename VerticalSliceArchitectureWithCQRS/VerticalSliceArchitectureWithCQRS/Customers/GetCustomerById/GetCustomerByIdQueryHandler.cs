@@ -5,7 +5,7 @@ using VerticalSliceArchitectureWithCQRS.Share.Exceptions;
 namespace VerticalSliceArchitectureWithCQRS.Customers.GetCustomerById
 {
     internal class GetCustomerByIdQueryHandler
-        (CustomerContext context)
+        (AppDbContext context)
         : IQueryHandler<GetCustomerByIdQuery, GetCustomerByIdResponse>
     {
         public Task<GetCustomerByIdResponse> Handle(GetCustomerByIdQuery query, CancellationToken cancellationToken)

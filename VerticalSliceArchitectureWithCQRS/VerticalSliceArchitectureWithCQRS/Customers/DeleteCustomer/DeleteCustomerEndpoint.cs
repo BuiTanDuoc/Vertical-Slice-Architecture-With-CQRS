@@ -18,6 +18,7 @@ namespace VerticalSliceArchitectureWithCQRS.Customers.DeleteCustomer
                 return Results.Ok(response);
             })
             .WithName("DeleteCustomer")
+            .WithTags("Customers")
             .Produces<DeleteCustomerResponse>()
             .ProducesProblem(StatusCodes.Status400BadRequest)
             .ProducesProblem(StatusCodes.Status404NotFound)

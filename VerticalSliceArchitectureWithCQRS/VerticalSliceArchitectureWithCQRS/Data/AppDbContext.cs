@@ -3,9 +3,10 @@ using VerticalSliceArchitectureWithCQRS.Models;
 
 namespace VerticalSliceArchitectureWithCQRS.Data
 {
-    public class CustomerContext(DbContextOptions<CustomerContext> options) : DbContext(options)
+    public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
     {
         public DbSet<Customer> Customers { get; set; } = default!;
+        public DbSet<Product> Products { get; set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

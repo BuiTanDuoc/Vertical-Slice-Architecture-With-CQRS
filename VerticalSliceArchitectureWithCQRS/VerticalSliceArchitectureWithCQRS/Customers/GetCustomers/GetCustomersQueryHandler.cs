@@ -7,7 +7,7 @@ using VerticalSliceArchitectureWithCQRS.Share.Pagination;
 namespace VerticalSliceArchitectureWithCQRS.Customers.GetCustomers
 {
     public class GetCustomersQueryHandler
-    (CustomerContext context)
+    (AppDbContext context)
         : IQueryHandler<GetCustomersQuery, GetCustomersResponse>
     {
         public async Task<GetCustomersResponse> Handle(GetCustomersQuery query, CancellationToken cancellationToken)

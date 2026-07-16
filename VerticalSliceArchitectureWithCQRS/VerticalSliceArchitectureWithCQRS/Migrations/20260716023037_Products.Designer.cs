@@ -12,8 +12,8 @@ using VerticalSliceArchitectureWithCQRS.Data;
 namespace VerticalSliceArchitectureWithCQRS.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260715103527_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20260716023037_Products")]
+    partial class Products
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,6 +56,32 @@ namespace VerticalSliceArchitectureWithCQRS.Migrations
                             CustomerCode = "CUST-002",
                             CustomerName = "Jane Smith"
                         });
+                });
+
+            modelBuilder.Entity("VerticalSliceArchitectureWithCQRS.Models.Product", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateOnly>("CraetedDate")
+                        .HasColumnType("date");
+
+                    b.Property<string>("ProductCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Products");
                 });
 #pragma warning restore 612, 618
         }

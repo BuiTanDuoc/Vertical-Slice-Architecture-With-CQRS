@@ -21,6 +21,7 @@ namespace VerticalSliceArchitectureWithCQRS.Customers.UpdateCustomer
                     return Results.Ok(response);
                 })
                 .WithName("UpdateCustomer")
+                .WithTags("Customers")
                 .Produces<UpdateCustomerResponse>()
                 .ProducesProblem(StatusCodes.Status400BadRequest)
                 .ProducesProblem(StatusCodes.Status404NotFound)
