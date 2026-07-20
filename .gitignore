@@ -3,3 +3,12 @@ VerticalSliceArchitectureWithCQRS/VerticalSliceArchitectureWithCQRS/obj/
 VerticalSliceArchitectureWithCQRS/VerticalSliceArchitectureWithCQRS/bin/
 VerticalSliceArchitectureWithCQRS/VerticalSliceArchitectureWithCQRS.Share/bin/
 VerticalSliceArchitectureWithCQRS/VerticalSliceArchitectureWithCQRS.Share/obj/
+CleanArchitectureWithCQRS/.vs/
+CleanArchitectureWithCQRS/src/CqrsDemo.Api/bin/
+CleanArchitectureWithCQRS/src/CqrsDemo.Api/obj/
+CleanArchitectureWithCQRS/src/CqrsDemo.Application/bin/
+CleanArchitectureWithCQRS/src/CqrsDemo.Application/obj/
+CleanArchitectureWithCQRS/src/CqrsDemo.Domain/bin/
+CleanArchitectureWithCQRS/src/CqrsDemo.Domain/obj/
+CleanArchitectureWithCQRS/src/CqrsDemo.Infrastructure/bin/
+CleanArchitectureWithCQRS/src/CqrsDemo.Infrastructure/obj/
